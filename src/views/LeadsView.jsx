@@ -41,11 +41,31 @@ export const LeadsView = ({ company }) => {
   }, [company]);
 
   const filteredLeads = useMemo(() => {
+    const term = search ? search.toLowerCase().trim() : '';
+
     return leads.filter(lead => {
       // Search
-      const searchMatch = !search || 
-        (lead.name && lead.name.toLowerCase().includes(search.toLowerCase())) || 
-        (lead.telefone && lead.telefone.toLowerCase().includes(search.toLowerCase()));
+      let searchMatch = true;
+      if (term) {
+        const fixedMatch = 
+          (lead.name && lead.name.toLowerCase().includes(term)) || 
+          (lead.telefone && lead.telefone.toLowerCase().includes(term));
+
+        let meta;
+        try {
+          meta = typeof lead.metadata === 'string'
+            ? JSON.parse(lead.metadata)
+            : (lead.metadata || {});
+        } catch {
+          meta = {};
+        }
+
+        const metaMatch = Object.values(meta)
+          .some(val => String(val).toLowerCase().includes(term));
+
+        searchMatch = fixedMatch || metaMatch;
+      }
+
       if (!searchMatch) return false;
 
       // Interest
