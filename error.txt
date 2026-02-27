@@ -1,0 +1,44 @@
+
+> dashboard-agente-disparos@1.0.0 build
+> vite build
+
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 26 modules transformed.
+
+[31mx[39m Build failed in 1.50s
+[31merror during build:
+[31m[vite:build-import-analysis] [plugin vite:build-import-analysis] src/utils/formatters.js (39:109): Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.[31m
+file: [36mC:/Users/mateu/Documents/work/orbital-ia/sistemas/dashboard-agente_disparos/src/utils/formatters.js:39:109[31m
+[33m
+37:     return (
+38:       <span className="px-2.5 py-1 rounded-full text-xs font-medium border text-gray-900 dark:text-zinc-100 whitespace-...
+39:         <span className="inline-block w-2 h-2 rounded-full mr-1.5" style={{ backgroundColor: color }}></span>
+                                                                                                                 ^
+40:         {val}
+41:       </span>
+[31m
+    at getRollupError (file:///C:/Users/mateu/Documents/work/orbital-ia/sistemas/dashboard-agente_disparos/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at error (file:///C:/Users/mateu/Documents/work/orbital-ia/sistemas/dashboard-agente_disparos/node_modules/rollup/dist/es/shared/parseAst.js:398:42)
+    at Object.error (file:///C:/Users/mateu/Documents/work/orbital-ia/sistemas/dashboard-agente_disparos/node_modules/rollup/dist/es/shared/node-entry.js:22249:20)
+    at Object.error (file:///C:/Users/mateu/Documents/work/orbital-ia/sistemas/dashboard-agente_disparos/node_modules/rollup/dist/es/shared/node-entry.js:21298:42)
+    at Object.transform (file:///C:/Users/mateu/Documents/work/orbital-ia/sistemas/dashboard-agente_disparos/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64913:14)[39m
+
+Command failed: npm run build
+[31mx[39m Build failed in 1.50s
+[31merror during build:
+[31m[vite:build-import-analysis] [plugin vite:build-import-analysis] src/utils/formatters.js (39:109): Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.[31m
+file: [36mC:/Users/mateu/Documents/work/orbital-ia/sistemas/dashboard-agente_disparos/src/utils/formatters.js:39:109[31m
+[33m
+37:     return (
+38:       <span className="px-2.5 py-1 rounded-full text-xs font-medium border text-gray-900 dark:text-zinc-100 whitespace-...
+39:         <span className="inline-block w-2 h-2 rounded-full mr-1.5" style={{ backgroundColor: color }}></span>
+                                                                                                                 ^
+40:         {val}
+41:       </span>
+[31m
+    at getRollupError (file:///C:/Users/mateu/Documents/work/orbital-ia/sistemas/dashboard-agente_disparos/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at error (file:///C:/Users/mateu/Documents/work/orbital-ia/sistemas/dashboard-agente_disparos/node_modules/rollup/dist/es/shared/parseAst.js:398:42)
+    at Object.error (file:///C:/Users/mateu/Documents/work/orbital-ia/sistemas/dashboard-agente_disparos/node_modules/rollup/dist/es/shared/node-entry.js:22249:20)
+    at Object.error (file:///C:/Users/mateu/Documents/work/orbital-ia/sistemas/dashboard-agente_disparos/node_modules/rollup/dist/es/shared/node-entry.js:21298:42)
+    at Object.transform (file:///C:/Users/mateu/Documents/work/orbital-ia/sistemas/dashboard-agente_disparos/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64913:14)[39m
